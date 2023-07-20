@@ -1,8 +1,266 @@
-import React from "react";
+import React, { useState } from "react";
 import "./VisaCountries.css";
+import Country from "./Contry";
+import ContinentList from "./ContinentList"
+
+//Images
+
+//America
+import canadaImage from './images/美洲/加拿大.png';
+import cubaImage from './images/美洲/古巴.png';
+import colombiaImage from './images/美洲/哥伦比亚.png';
+import mexicoImage from './images/美洲/墨西哥.png';
+import venezuelaImage from './images/美洲/委内瑞拉.png';
+import panamaImage from './images/美洲/巴拿马.png';
+import brazilImage from './images/美洲/巴西.png';
+import chileImage from './images/美洲/智利.png';
+import peruImage from './images/美洲/秘鲁.png';
+import usaImage from './images/美洲/美国.png';
+import argentinaImage from './images/美洲/阿根廷.png';
+
+//Asia
+import uzbekistanImage from './images/亚洲/乌兹别克.png';
+import israelImage from './images/亚洲/以色列.png';
+import iraqImage from './images/亚洲/伊拉克.png';
+import iranImage from './images/亚洲/伊朗.png';
+import indiaImage from './images/亚洲/印度.png';
+import indonesiaImage from './images/亚洲/印度尼西亚.png';
+import kyrgyzstanImage from './images/亚洲/吉尔吉斯斯坦.png';
+import kazakhstanImage from './images/亚洲/哈萨克斯坦.png';
+import turkmenistanImage from './images/亚洲/土库曼斯坦.png';
+import turkeyImage from './images/亚洲/土耳其.png';
+import tajikistanImage from './images/亚洲/塔吉克斯坦.png';
+import bangladeshImage from './images/亚洲/孟加拉.png';
+import nepalImage from './images/亚洲/尼泊尔.png';
+import pakistanImage from './images/亚洲/巴基斯坦.png';
+import bahrainImage from './images/亚洲/巴林.png';
+import bruneiImage from './images/亚洲/文莱.png';
+import srilankaImage from './images/亚洲/斯里兰卡.png';
+import singaporeImage from './images/亚洲/新加坡.png';
+import japanImage from './images/亚洲/日本.png';
+import cambodiaImage from './images/亚洲/柬埔寨.png';
+import georgiaImage from './images/亚洲/格鲁吉亚.png';
+import saudiArabiaImage from './images/亚洲/沙特阿拉伯.png';
+import thailandImage from './images/亚洲/泰国.png';
+import kuwaitImage from './images/亚洲/科威特.png';
+import jordanImage from './images/亚洲/约旦.png';
+import myanmarImage from './images/亚洲/缅甸.png';
+import laosImage from './images/亚洲/老挝.png';
+import philippinesImage from './images/亚洲/菲律宾.png';
+import mongoliaImage from './images/亚洲/蒙古.png';
+import vietnamImage from './images/亚洲/越南.png';
+import dubaiImage from './images/亚洲/迪拜.png';
+import azerbaijanImage from './images/亚洲/阿塞拜疆.png';
+import omanImage from './images/亚洲/阿曼.png';
+import koreaImage from './images/亚洲/韩国.png';
+import malaysiaImage from './images/亚洲/马来西亚.png';
+
+
+//Oceania
+import newzealandImage from './images/大洋洲/新西兰.png';
+import australiaImage from './images/大洋洲/澳大利亚.png';
+
+//Europe
+import denmarkImage from './images/欧洲/丹麦.png';
+import ukraineImage from './images/欧洲/乌克兰.png';
+import russiaImage from './images/欧洲/俄罗斯.png';
+import croatiaImage from './images/欧洲/克罗地亚.png';
+import icelandImage from './images/欧洲/冰岛.png';
+import liechtensteinImage from './images/欧洲/列支敦士登.png';
+import hungaryImage from './images/欧洲/匈牙利.png';
+import luxembourgImage from './images/欧洲/卢森堡.png';
+import austriaImage from './images/欧洲/奥地利.png';
+import greeceImage from './images/欧洲/希腊.png';
+import germanyImage from './images/欧洲/德国.png';
+import italyImage from './images/欧洲/意大利.png';
+import latviaImage from './images/欧洲/拉脱维亚.png';
+import norwayImage from './images/欧洲/挪威.png';
+import czechImage from './images/欧洲/捷克.png';
+import slovakiaImage from './images/欧洲/斯洛伐克.png';
+import sloveniaImage from './images/欧洲/斯洛文尼亚.png';
+import belgiumImage from './images/欧洲/比利时.png';
+import franceImage from './images/欧洲/法国.png';
+import polandImage from './images/欧洲/波兰.png';
+import irelandImage from './images/欧洲/爱尔兰.png';
+import estoniaImage from './images/欧洲/爱沙尼亚.png';
+import swedenImage from './images/欧洲/瑞典.png';
+import switzerlandImage from './images/欧洲/瑞士.png';
+import lithuaniaImage from './images/欧洲/立陶宛.png';
+import romaniaImage from './images/欧洲/罗马尼亚.png';
+import finlandImage from './images/欧洲/芬兰.png';
+import ukImage from './images/欧洲/英国.png';
+import netherlandsImage from './images/欧洲/荷兰.png';
+import portugalImage from './images/欧洲/葡萄牙.png';
+import spainImage from './images/欧洲/西班牙.png';
+import maltaImage from './images/欧洲/马耳他.png';
+
+//Africa
+import ugandaImage from './images/非洲/乌干达.png';
+import chadImage from './images/非洲/乍得.png';
+import guineaImage from './images/非洲/几内亚.png';
+import ghanaImage from './images/非洲/加纳.png';
+import southAfricaImage from './images/非洲/南非.png';
+import botswanaImage from './images/非洲/博茨瓦纳.png';
+import cameroonImage from './images/非洲/喀麦隆.png';
+import tanzaniaImage from './images/非洲/坦桑尼亚.png';
+import egyptImage from './images/非洲/埃及.png';
+import ethiopiaImage from './images/非洲/埃塞俄比亚.png';
+import togoImage from './images/非洲/多哥.png';
+import angolaImage from './images/非洲/安哥拉.png';
+import nigeriaImage from './images/非洲/尼日利亚.png';
+import namibiaImage from './images/非洲/纳米比亚.png';
+import kenyaImage from './images/非洲/肯尼亚.png';
+import mozambiqueImage from './images/非洲/莫桑比克.png';
+import zambiaImage from './images/非洲/赞比亚.png';
+import algeriaImage from './images/非洲/阿尔及利亚.png';
+import madagascarImage from './images/非洲/马达加斯加.png';
+import maliImage from './images/非洲/马里.png';
+
+
+let CountryURL = new Map();
+
+CountryURL.set('加拿大', canadaImage);
+CountryURL.set('古巴', cubaImage);
+CountryURL.set('哥伦比亚', colombiaImage);
+CountryURL.set('墨西哥', mexicoImage);
+CountryURL.set('委内瑞拉', venezuelaImage);
+CountryURL.set('巴拿马', panamaImage);
+CountryURL.set('巴西', brazilImage);
+CountryURL.set('智利', chileImage);
+CountryURL.set('秘鲁', peruImage);
+CountryURL.set('美国', usaImage);
+CountryURL.set('阿根廷', argentinaImage);
+CountryURL.set('乌兹别克', uzbekistanImage);
+CountryURL.set('以色列', israelImage);
+CountryURL.set('伊拉克', iraqImage);
+CountryURL.set('伊朗', iranImage);
+CountryURL.set('印度', indiaImage);
+CountryURL.set('印度尼西亚', indonesiaImage);
+CountryURL.set('吉尔吉斯斯坦', kyrgyzstanImage);
+CountryURL.set('哈萨克斯坦', kazakhstanImage);
+CountryURL.set('土库曼斯坦', turkmenistanImage);
+CountryURL.set('土耳其', turkeyImage);
+CountryURL.set('塔吉克斯坦', tajikistanImage);
+CountryURL.set('孟加拉', bangladeshImage);
+CountryURL.set('尼泊尔', nepalImage);
+CountryURL.set('巴基斯坦', pakistanImage);
+CountryURL.set('巴林', bahrainImage);
+CountryURL.set('文莱', bruneiImage);
+CountryURL.set('斯里兰卡', srilankaImage);
+CountryURL.set('新加坡', singaporeImage);
+CountryURL.set('日本', japanImage);
+CountryURL.set('柬埔寨', cambodiaImage);
+CountryURL.set('格鲁吉亚', georgiaImage);
+CountryURL.set('沙特阿拉伯', saudiArabiaImage);
+CountryURL.set('泰国', thailandImage);
+CountryURL.set('科威特', kuwaitImage);
+CountryURL.set('约旦', jordanImage);
+CountryURL.set('缅甸', myanmarImage);
+CountryURL.set('老挝', laosImage);
+CountryURL.set('菲律宾', philippinesImage);
+CountryURL.set('蒙古', mongoliaImage);
+CountryURL.set('越南', vietnamImage);
+CountryURL.set('迪拜', dubaiImage);
+CountryURL.set('阿塞拜疆', azerbaijanImage);
+CountryURL.set('阿曼', omanImage);
+CountryURL.set('韩国', koreaImage);
+CountryURL.set('马来西亚', malaysiaImage);
+CountryURL.set('新西兰', newzealandImage);
+CountryURL.set('澳大利亚', australiaImage);
+CountryURL.set('丹麦', denmarkImage);
+CountryURL.set('乌克兰', ukraineImage);
+CountryURL.set('俄罗斯', russiaImage);
+CountryURL.set('克罗地亚', croatiaImage);
+CountryURL.set('冰岛', icelandImage);
+CountryURL.set('列支敦士登', liechtensteinImage);
+CountryURL.set('匈牙利', hungaryImage);
+CountryURL.set('卢森堡', luxembourgImage);
+CountryURL.set('奥地利', austriaImage);
+CountryURL.set('希腊', greeceImage);
+CountryURL.set('德国', germanyImage);
+CountryURL.set('意大利', italyImage);
+CountryURL.set('拉脱维亚', latviaImage);
+CountryURL.set('挪威', norwayImage);
+CountryURL.set('捷克', czechImage);
+CountryURL.set('斯洛伐克', slovakiaImage);
+CountryURL.set('斯洛文尼亚', sloveniaImage);
+CountryURL.set('比利时', belgiumImage);
+CountryURL.set('法国', franceImage);
+CountryURL.set('波兰', polandImage);
+CountryURL.set('爱尔兰', irelandImage);
+CountryURL.set('爱沙尼亚', estoniaImage);
+CountryURL.set('瑞典', swedenImage);
+CountryURL.set('瑞士', switzerlandImage);
+CountryURL.set('立陶宛', lithuaniaImage);
+CountryURL.set('罗马尼亚', romaniaImage);
+CountryURL.set('芬兰', finlandImage);
+CountryURL.set('英国', ukImage);
+CountryURL.set('荷兰', netherlandsImage);
+CountryURL.set('葡萄牙', portugalImage);
+CountryURL.set('西班牙', spainImage);
+CountryURL.set('马耳他', maltaImage);
+CountryURL.set('乌干达', ugandaImage);
+CountryURL.set('乍得', chadImage);
+CountryURL.set('几内亚', guineaImage);
+CountryURL.set('加纳', ghanaImage);
+CountryURL.set('南非', southAfricaImage);
+CountryURL.set('博茨瓦纳', botswanaImage);
+CountryURL.set('喀麦隆', cameroonImage);
+CountryURL.set('坦桑尼亚', tanzaniaImage);
+CountryURL.set('埃及', egyptImage);
+CountryURL.set('埃塞俄比亚', ethiopiaImage);
+CountryURL.set('多哥', togoImage);
+CountryURL.set('安哥拉', angolaImage);
+CountryURL.set('尼日利亚', nigeriaImage);
+CountryURL.set('纳米比亚', namibiaImage);
+CountryURL.set('肯尼亚', kenyaImage);
+CountryURL.set('莫桑比克', mozambiqueImage);
+CountryURL.set('赞比亚', zambiaImage);
+CountryURL.set('阿尔及利亚', algeriaImage);
+CountryURL.set('马达加斯加', madagascarImage);
+CountryURL.set('马里', maliImage);
+
+
+const continents = ['热门', '亚洲', '欧洲', '美洲', '大洋洲', '非洲'];
+const HotCountries = ['美国', '韩国', '日本', '澳大利亚', '法国', '德国', '马来西亚', '越南', '泰国', '新加坡', '俄罗斯', '新西兰', '沙特阿拉伯', '英国', '加拿大', '意大利', '西班牙', '柬埔寨', '缅甸', '老挝', '巴基斯坦', '瑞士', '土耳其', '迪拜', '孟加拉', '希腊', '荷兰', '瑞典', '葡萄牙', '冰岛'];
+const AsiaCountries = ['乌兹别克', '以色列', '伊拉克', '伊朗', '印度', '印度尼西亚', '吉尔吉斯斯坦', '哈萨克斯坦', '土库曼斯坦', '土耳其', '塔吉克斯坦', '孟加拉', '尼泊尔', '巴基斯坦', '巴林', '文莱', '斯里兰卡', '新加坡', '日本', '柬埔寨', '格鲁吉亚', '沙特阿拉伯', '泰国', '科威特', '约旦', '缅甸', '老挝', '菲律宾', '蒙古', '越南', '迪拜', '阿塞拜疆', '阿曼', '韩国', '马来西亚'];
+const AmericaCountries = ['加拿大', '古巴', '哥伦比亚', '墨西哥', '委内瑞拉', '巴拿马', '巴西', '智利', '秘鲁', '美国', '阿根廷'];
+const OceaniaCountries = ['新西兰', '澳大利亚'];
+const EuropeCountries = ['丹麦', '乌克兰', '俄罗斯', '克罗地亚', '冰岛', '列支敦士登', '匈牙利', '卢森堡', '奥地利', '希腊', '德国', '意大利', '拉脱维亚', '挪威', '捷克', '斯洛伐克', '斯洛文尼亚', '比利时', '法国', '波兰', '爱尔兰', '爱沙尼亚', '瑞典', '瑞士', '立陶宛', '罗马尼亚', '芬兰', '英国', '荷兰', '葡萄牙', '西班牙', '马耳他'];
+const AfricaCountries = ['乌干达', '乍得', '几内亚', '加纳', '南非', '博茨瓦纳', '喀麦隆', '坦桑尼亚', '埃及', '埃塞俄比亚', '多哥', '安哥拉', '尼日利亚', '纳米比亚', '肯尼亚', '莫桑比克', '赞比亚', '阿尔及利亚', '马达加斯加', '马里']
+
 
 
 const VisaCountries = () => {
+    const [countries, setCountries] = useState(HotCountries);
+
+
+    const handleContinentHover = (continent) => {
+        console.log(continent);
+        switch (continent) {
+            case '热门':
+                setCountries(HotCountries);
+                break;
+            case '亚洲':
+                setCountries(AsiaCountries);
+                break;
+            case '大洋洲':
+                setCountries(OceaniaCountries);
+                break;
+            case '欧洲':
+                setCountries(EuropeCountries);
+                break;
+            case '美洲':
+                setCountries(AmericaCountries);
+                break;
+            case '非洲':
+                setCountries(AfricaCountries);
+                break;
+            default:
+                setCountries(HotCountries);
+        }
+    }
+
     return (
         <div className="block_3 flex-col">
         <div className="group_6 flex-row">
@@ -83,300 +341,15 @@ const VisaCountries = () => {
             </div>
           </div>
         </div>
-        <div className="group_8 flex-row">
-          <div className="list_1 flex-row">
-            <div className="text-wrapper_12-0 flex-col">
-              <span className="text_18-0">热门</span>
-            </div>
-            <div className="text-wrapper_12-1 flex-col">
-              <span className="text_18-1">亚洲</span>
-            </div>
-            <div className="text-wrapper_12-2 flex-col">
-              <span className="text_18-2">欧洲</span>
-            </div>
-            <div className="text-wrapper_12-3 flex-col">
-              <span className="text_18-3">美洲</span>
-            </div>
-            <div className="text-wrapper_12-4 flex-col">
-              <span className="text_18-4">大洋洲</span>
-            </div>
-            <div className="text-wrapper_12-5 flex-col">
-              <span className="text_18-5">非洲</span>
-            </div>
-          </div>
-        </div>
+
+        <ContinentList continents={continents} handleContinentHover={handleContinentHover}/>
+        
         <div className="group_9 flex-row justify-between">
           <div className="grid_1 flex-row">
-            <div className="image-text_2-0 flex-col justify-between">
-              <img
-                className="image_9-0"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng426e482ff1a64a57f6912a5fda261dae8ccd648627a7fdc814dd17f0a0a227b2"
-                }
-              />
-              <span className="text-group_2-0">美国</span>
-            </div>
-            <div className="image-text_2-1 flex-col justify-between">
-              <img
-                className="image_9-1"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng939d30e8df1a872c68b29b65876671a0059e731505ea2da8aba12fd6bde88790"
-                }
-              />
-              <span className="text-group_2-1">韩国</span>
-            </div>
-            <div className="image-text_2-2 flex-col justify-between">
-              <img
-                className="image_9-2"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5a08bdb075d6201902141a3b32a30581444e6facf7cb7226bd92bd5679720afa"
-                }
-              />
-              <span className="text-group_2-2">日本</span>
-            </div>
-            <div className="image-text_2-3 flex-col justify-between">
-              <img
-                className="image_9-3"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng629557cfc55eab6932c438c594f39a3f1fdc673ed91e275211ce5da15d83232c"
-                }
-              />
-              <span className="text-group_2-3">澳大利亚</span>
-            </div>
-            <div className="image-text_2-4 flex-col justify-between">
-              <img
-                className="image_9-4"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng01f7b83c8c645eeb35f63d5e478485e8d0ecf3bcd3237a4b7be9ceab70fe4297"
-                }
-              />
-              <span className="text-group_2-4">法国</span>
-            </div>
-            <div className="image-text_2-5 flex-col justify-between">
-              <img
-                className="image_9-5"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngffbfd48906a79a66cf526284c6c82b50b600afd18b0e9f34e9357267a2d14ae3"
-                }
-              />
-              <span className="text-group_2-5">德国</span>
-            </div>
-            <div className="image-text_2-6 flex-col justify-between">
-              <img
-                className="image_9-6"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng0a3145400e0bff0558718d028fe2a601c9e78ec772355b12790d5e21e1026429"
-                }
-              />
-              <span className="text-group_2-6">马来西亚</span>
-            </div>
-            <div className="image-text_2-7 flex-col justify-between">
-              <img
-                className="image_9-7"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng3698310a39304608b8340ba1f713a22f966482cd7f8765c076d73e5bfb6a57c0"
-                }
-              />
-              <span className="text-group_2-7">越南</span>
-            </div>
-            <div className="image-text_2-8 flex-col justify-between">
-              <img
-                className="image_9-8"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng2f7ffae29d68681e13a78b44375038873e11dd692b267ef7320890160285b8d0"
-                }
-              />
-              <span className="text-group_2-8">泰国</span>
-            </div>
-            <div className="image-text_2-9 flex-col justify-between">
-              <img
-                className="image_9-9"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng897ada63d4e2e0654f8d7e56acf11de954a062c4d6ac1bb2be09e4d450c7c05c"
-                }
-              />
-              <span className="text-group_2-9">新加坡</span>
-            </div>
-            <div className="image-text_2-10 flex-col justify-between">
-              <img
-                className="image_9-10"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng330f8f1a87eeaa3a626a0db8e83a5f7c8a74281d5623f662a435617081f3acd4"
-                }
-              />
-              <span className="text-group_2-10">俄罗斯</span>
-            </div>
-            <div className="image-text_2-11 flex-col justify-between">
-              <img
-                className="image_9-11"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng0931f4e0fa8de2bcd3a82793edc21e7c8c3bf77715a289073b51afe7ea70ff86"
-                }
-              />
-              <span className="text-group_2-11">新西兰</span>
-            </div>
-            <div className="image-text_2-12 flex-col justify-between">
-              <img
-                className="image_9-12"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngc6e4aef76da7ccf7cefae1cd8b6d4ffb219792d9795087df405365042c84834e"
-                }
-              />
-              <span className="text-group_2-12">沙特阿拉伯</span>
-            </div>
-            <div className="image-text_2-13 flex-col justify-between">
-              <img
-                className="image_9-13"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1e61defe8aafd5bbc9fa2a95a236e1e6b98339b38667123c5eeddbadb98426d8"
-                }
-              />
-              <span className="text-group_2-13">英国</span>
-            </div>
-            <div className="image-text_2-14 flex-col justify-between">
-              <img
-                className="image_9-14"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1233e31219861295a30dc88be7ea06e9b113b55a3d432a7338c213dfdb95841b"
-                }
-              />
-              <span className="text-group_2-14">加拿大</span>
-            </div>
-            <div className="image-text_2-15 flex-col justify-between">
-              <img
-                className="image_9-15"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngd63b6e208c2700b292cc50e61b8983b25ff84d898351a0ee554c63099056d5b8"
-                }
-              />
-              <span className="text-group_2-15">意大利</span>
-            </div>
-            <div className="image-text_2-16 flex-col justify-between">
-              <img
-                className="image_9-16"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngfceadfd90a02369d1e0ef12a951d2bc6ad41627b3a6fc87f7b33df12cc93f2e2"
-                }
-              />
-              <span className="text-group_2-16">西班牙</span>
-            </div>
-            <div className="image-text_2-17 flex-col justify-between">
-              <img
-                className="image_9-17"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng79598e4d2dca7d6be12f7acd0a6c4548fa853480c450351d83216c225da950f2"
-                }
-              />
-              <span className="text-group_2-17">柬埔寨</span>
-            </div>
-            <div className="image-text_2-18 flex-col justify-between">
-              <img
-                className="image_9-18"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb6598cbae41f4110d372289a28196c7cf54fb5471c542fb91365ba4a40c88dd8"
-                }
-              />
-              <span className="text-group_2-18">缅甸</span>
-            </div>
-            <div className="image-text_2-19 flex-col justify-between">
-              <img
-                className="image_9-19"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5a2a4fe38d46ff185039a4d023039bfefa9dfdf68327c39b6420d1ac6ccd2288"
-                }
-              />
-              <span className="text-group_2-19">老挝</span>
-            </div>
-            <div className="image-text_2-20 flex-col justify-between">
-              <img
-                className="image_9-20"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngdccacf2437ad0b49187392498e0cf4d266ff2fa27d753fa1c2b1c1ff370a4cf8"
-                }
-              />
-              <span className="text-group_2-20">巴基斯担</span>
-            </div>
-            <div className="image-text_2-21 flex-col justify-between">
-              <img
-                className="image_9-21"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1f23659af8a08d08e0dbacb08aa943921cabe705b07954ef0a81728b174dfe9a"
-                }
-              />
-              <span className="text-group_2-21">瑞士</span>
-            </div>
-            <div className="image-text_2-22 flex-col justify-between">
-              <img
-                className="image_9-22"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngc298025178c7e8a9f587641c2c83b53f223818e3455677e4cf886b51216e71eb"
-                }
-              />
-              <span className="text-group_2-22">土耳其</span>
-            </div>
-            <div className="image-text_2-23 flex-col justify-between">
-              <img
-                className="image_9-23"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngcae4c8d6891c07bfbefc0dfc5ed11f80caecfe6bf4e9037ca36bd45d99410dc7"
-                }
-              />
-              <span className="text-group_2-23">迪拜</span>
-            </div>
-            <div className="image-text_2-24 flex-col justify-between">
-              <img
-                className="image_9-24"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng93c231f0d198e77003dc94164f8d3934d0a6034977fddc807e040bffb5621375"
-                }
-              />
-              <span className="text-group_2-24">孟加拉</span>
-            </div>
-            <div className="image-text_2-25 flex-col justify-between">
-              <img
-                className="image_9-25"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng202039e7731f64aabb87c5a2c566327b68bc50a8c1dfec4cab7d77c98f105a38"
-                }
-              />
-              <span className="text-group_2-25">希腊</span>
-            </div>
-            <div className="image-text_2-26 flex-col justify-between">
-              <img
-                className="image_9-26"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng028b323ecbad9a8c36d3cb7d1ea2d5eb3d62ab63220421de3fe9d1ff13ce3229"
-                }
-              />
-              <span className="text-group_2-26">荷兰</span>
-            </div>
-            <div className="image-text_2-27 flex-col justify-between">
-              <img
-                className="image_9-27"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9338ec7c050bc41a9f7f209f4f065c44fc841592b7960cb64e4049fa269b378e"
-                }
-              />
-              <span className="text-group_2-27">瑞典</span>
-            </div>
-            <div className="image-text_2-28 flex-col justify-between">
-              <img
-                className="image_9-28"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng788e94b3fe2e4458d2140c562352b5b4895a9f7054da48844325a3af0a4b8101"
-                }
-              />
-              <span className="text-group_2-28">葡萄牙</span>
-            </div>
-            <div className="image-text_2-29 flex-col justify-between">
-              <img
-                className="image_9-29"
-                src={
-                  "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9b7df6def299f17723f53038e58a01c3eaf42ce27e826e7483220e6be981f396"
-                }
-              />
-              <span className="text-group_2-29">冰岛</span>
-            </div>
+            {countries.map((country) => (
+                <Country imageUrl={CountryURL.get(country)} name={country} />
+            ))}
+
           </div>
           <div className="box_2 flex-row">
             <div className="image-text_3 flex-col justify-between">
