@@ -1,0 +1,112 @@
+.group_101 {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  margin-top: 300px;
+  z-index: 2;
+}
+
+.box_101 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 1);
+  width: 80px;
+  height: 80px;
+}
+
+.image-text_3 {
+  width: 56px;
+  height: 56px;
+  margin: 10px 0 0 12px;
+}
+
+.label_3 {
+  width: 30px;
+  height: 30px;
+  margin-left: 13px;
+}
+
+.text-group_3 {
+  width: 56px;
+  height: 20px;
+  overflow-wrap: break-word;
+  color: rgba(102, 102, 102, 1);
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: NaN;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 20px;
+  margin-top: 6px;
+}
+
+.group_10 {
+  width: 173px;
+  height: 36px;
+  overflow-wrap: break-word;
+  color: rgba(231, 0, 17, 1);
+  font-size: 36px;
+  font-family: ZQKziyoucusong;
+  font-weight: NaN;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 39px;
+  margin-top: 5px;
+}
+.image-text_4 {
+  width: 56px;
+  height: 58px;
+  margin: 10px 0 0 12px;
+}
+.label_4 {
+  width: 30px;
+  height: 30px;
+  margin-left: 14px;
+}
+.text-group_4 {
+  width: 56px;
+  height: 20px;
+  overflow-wrap: break-word;
+  color: rgba(102, 102, 102, 1);
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: NaN;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 20px;
+  margin-top: 8px;
+}
+
+.group_10 {
+  width: 173px;
+  height: 36px;
+  overflow-wrap: break-word;
+  color: rgba(231, 0, 17, 1);
+  font-size: 36px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 39px;
+  margin-top: 5px;
+}
+.image-text_4 {
+  width: 56px;
+  height: 58px;
+  margin: 10px 0 0 12px;
+}
+.label_4 {
+  width: 30px;
+  height: 30px;
+  margin-left: 14px;
+}
+.text-group_4 {
+  width: 56px;
+  height: 20px;
+  overflow-wrap: break-word;
+  color: rgba(102, 102, 102, 1);
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: NaN;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 20px;
+  margin-top: 8px;
+}

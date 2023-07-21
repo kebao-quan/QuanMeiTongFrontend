@@ -1,26 +1,27 @@
-import './App.css';
-import './common.css'
-//import DDS_lanhupage_0 from './components/lanhu/DDS_lanhupage_0';
-import NavBar from './components/NavBar/NavBar'
-import SearchBar from './components/SearchBar/SearchBar'
-import VisaCountries from './components/VisaCountries/VisaCountries';
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import VisaApplication from './components/VisaApplication/VisaApplication';
-// import Downloads from './components/Downloads/Downloads';
-// import Tickets from './components/Tickets/Tickets';
-// import Login from './components/Login/Login';
-// import Home from './components/Home/Home';
-//import { useState } from 'react';
+import "./App.css";
+import "./common.css";
+import NavBar from "./components/NavBar/NavBar";
+import SearchBar from "./components/SearchBar/SearchBar";
+import VisaCountries from "./components/VisaCountries/VisaCountries";
+import VisaApplicationProcess from "./components/VisaApplicationProcess/VisaApplicationProcess";
+import Information from "./components/Information/Information";
+import BottonNavBar from "./components/BottonNavBar/BottonNavBar";
+import Consult from "./components/Consult/Consult";
 
 function App() {
   return (
-    <div className="App flex-col">
+    <div className="App">
       <NavBar />
       <SearchBar />
       <VisaCountries />
-      {/* <DDS_lanhupage_0 /> */}
+      <VisaApplicationProcess />
+      <Information />
+      <BottonNavBar />
+      <Consult />
     </div>
   );
 }
 
 export default App;
+
+
