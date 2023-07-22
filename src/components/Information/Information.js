@@ -75,8 +75,8 @@ const Information = () => {
           </div>
         </div>
       </div>
-      <div className="text-wrapper_98 flex-col">
-        <span className="text_31">24小时咨询电话：400-168-2688</span>
+      <div className="phone-information-text-wrapper_1 flex-col">
+        <span className="phone-information-text_1">24小时咨询电话：400-168-2688</span>
       </div>
     </>
   );

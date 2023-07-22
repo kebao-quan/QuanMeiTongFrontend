@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 const Navbar = () => {
@@ -19,14 +20,20 @@ const Navbar = () => {
         />
         <span className="text_2">400-168-2688</span>
         <div className="text-wrapper_1 flex-col">
-          <button className="text_3" to="/">
+          <NavLink className="text_3" to="/">
             网站首页
-          </button>
+          </NavLink>
+          {/* <button className="text_3" to="/">
+            网站首页
+          </button> */}
         </div>
         <div className="text-wrapper_2 flex-col">
-          <button className="text_4" to="/visa_countries">
+          <NavLink className="text_4" to="/visa">
             签证国家
-          </button>
+          </NavLink>
+          {/* <button className="text_4" to="/visa_countries">
+            签证国家
+          </button> */}
         </div>
         <div className="text-wrapper_3 flex-col">
           <button className="text_5" to="/visa_application">

@@ -74,7 +74,6 @@
   overflow-wrap: break-word;
   color: rgba(255, 255, 255, 1);
   font-size: 18px;
-  font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: left;
   white-space: nowrap;
@@ -91,7 +90,7 @@
   position: absolute;
   z-index: 1;
   left: 620px;
-  top: 713px;
+  top: 709px;
   width: 660px;
   height: 240px;
 }
@@ -247,7 +246,7 @@
   margin: 15px 0 0 15px;
   display: flex;
   flex-wrap: wrap;
-  align-content: start;
+  align-content: flex-start;
 }
 
 .text_101 {

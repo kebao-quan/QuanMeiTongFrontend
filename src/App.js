@@ -1,23 +1,20 @@
 import "./App.css";
 import "./common.css";
 import NavBar from "./components/NavBar/NavBar";
-import SearchBar from "./components/SearchBar/SearchBar";
-import VisaCountries from "./components/VisaCountries/VisaCountries";
-import VisaApplicationProcess from "./components/VisaApplicationProcess/VisaApplicationProcess";
-import Information from "./components/Information/Information";
-import BottonNavBar from "./components/BottonNavBar/BottonNavBar";
-import Consult from "./components/Consult/Consult";
+import Home from "./pages/Home";
+import VisaCountries from "./pages/Visa_Countries";
+
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <SearchBar />
-      <VisaCountries />
-      <VisaApplicationProcess />
-      <Information />
-      <BottonNavBar />
-      <Consult />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/visa" element={<VisaCountries />} />
+      </Routes>
     </div>
   );
 }

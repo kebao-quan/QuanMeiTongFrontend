@@ -141,12 +141,15 @@
   margin-top: 18px;
 }
 
-.text-wrapper_98 {
+
+
+/* 电话信息 */
+.phone-information-text-wrapper_1 {
   background-color: #D23028;
   height: 100px;
   width: 1920px;
 }
-.text_31 {
+.phone-information-text_1 {
   width: 610px;
   height: 66px;
   overflow-wrap: break-word;
