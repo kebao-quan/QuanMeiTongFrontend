@@ -25,7 +25,9 @@ import sous from "./images/sous.png";
 const VisaCountriesPageContent = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("A");
-  const [searchResultList, setSearchResultList] = useState([]);
+  const [searchResultList, setSearchResultList] = useState(
+    getCountriesByLetter("A")
+  );
 
   const searchLetters = [
     "A",
@@ -56,18 +58,32 @@ const VisaCountriesPageContent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let pinyinTerm = pinyin(searchTerm, { toneType: 'none'})[0][0].toUpperCase();
+    if (searchTerm === "") {
+      setSelectedLetter("A");
+      setSearchResultList(getCountriesByLetter("A"));
+      return;
+    }
+    let pinyinTerm = pinyin(searchTerm, {
+      toneType: "none",
+    })[0][0].toUpperCase();
     if (searchLetters.includes(pinyinTerm)) {
       setSelectedLetter(pinyinTerm);
     } else {
       setSelectedLetter("");
     }
     setSearchResultList(getCountriesByName(searchTerm));
+    console.log(searchResultList);
   };
 
   const handleLetterClick = (letter) => {
     setSelectedLetter(letter);
     setSearchResultList(getCountriesByLetter(letter));
+  };
+
+  const handleClear = () => {
+    setSearchTerm("");
+    setSelectedLetter("A");
+    setSearchResultList(getCountriesByLetter("A"));
   };
 
   return (
@@ -93,7 +109,7 @@ const VisaCountriesPageContent = () => {
       </div>
       <div className="flex-col">
         <div className="visa-search_1 flex-row align-center">
-          <span className="visa-text_3">按拼音查找</span>
+          <span className="visa-text_3 unselectable">按拼音查找</span>
           <div className="visa-text-group_2 flew-row align-center">
             {searchLetters.map((letter, index) => (
               <Letter
@@ -106,13 +122,15 @@ const VisaCountriesPageContent = () => {
           </div>
           <div className="visa-searchbar_1 flex-row align-center">
             <img className="visa-search-icon_1" src={sous} alt=""></img>
-            <input
-              className="visa-text-group_3"
-              type="text"
-              value={searchTerm}
-              onChange={handleChange}
-              placeholder="查找你的目的地国家"
-            />
+            <form onSubmit={handleSubmit}>
+              <input
+                className="visa-text-group_3"
+                type="text"
+                value={searchTerm}
+                onChange={handleChange}
+                placeholder="查找你的目的地国家"
+              />
+            </form>
           </div>
           <button
             className="visa-searchbar_2 justify-center align-center"
@@ -122,14 +140,26 @@ const VisaCountriesPageContent = () => {
           </button>
         </div>
         <div className="visa-searchresult_1 flex-row">
-          <div className="visa-searchresult_2 flex-col justify-center align-center">
-            <span className="visa-text_6">{selectedLetter}</span>
-          </div>
-          <div className="visa-searchresult_3 flex-col">
-            {searchResultList.map((country, index) => (
-              <SearchResultItem key={index} country={country} />
-            ))}
-          </div>
+          {searchResultList.length !== 0 && (
+            <>
+              <div className="visa-searchresult_2 flex-col justify-center align-center">
+                <span className="visa-text_6">{selectedLetter}</span>
+              </div>
+              <div className="visa-searchresult_3 flex-col">
+                {searchResultList.map((country, index) => (
+                  <SearchResultItem key={index} country={country} />
+                ))}
+              </div>
+            </>
+          )}
+          {searchResultList.length === 0 && (
+            <div className="visa-searchresult_4 flex-col align-center">
+              <span className="visa-text_7">暂无搜索的国家</span>
+              <button className="visa-clear-search" onClick={handleClear}>
+                <span className="visa-text_8">清空搜索</span>
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
