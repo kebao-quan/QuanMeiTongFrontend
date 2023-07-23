@@ -1,0 +1,152 @@
+.visa-background {
+  background-color: #f6f6f6;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.visa-bannner {
+  background-image: url("./images/qzgjbj.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  align-items: center;
+  min-height: 100vh;
+  width: 1920px;
+  height: 720px;
+}
+
+.visa-group_2 {
+  width: 1600px;
+  height: 680px;
+  background-color: #ffffff;
+  align-items: center;
+  margin: -260px 0 0 0;
+}
+
+.visa-text-group_1 {
+  display: flex;
+  align-items: center;
+}
+
+.visa-text_1 {
+  font-size: 30px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin: 60px 0 0 0;
+}
+
+.visa-text_2 {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  margin: 10px 0 0 0;
+}
+
+.visa-grid_1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: 40px 0 0 0;
+  width: 1460px;
+  height: 200px;
+}
+
+.visa-search_1 {
+  width: 1600px;
+  height: 80px;
+  background: #ffffff;
+  margin: 20px 0 0 0;
+}
+
+.visa-text_3 {
+  width: 108px;
+  height: 25px;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  line-height: 25px;
+  margin: 0 0 0 70px;
+}
+
+.visa-text-group_2 {
+  width: 924px;
+  height: 25px;
+}
+
+
+.visa-searchbar_1 {
+  width: 300px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.visa-search-icon_1 {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 10px;
+}
+
+.visa-text-group_3 {
+  width: 246px;
+  height: 25px;
+  border: none;
+  outline: none;
+  overflow-wrap: break-word;
+  color: black;
+  font-size: 18px;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  margin: 0 0 0 10px;
+}
+
+.visa-text-group_3::placeholder {
+  color: rgba(153, 153, 153, 1);
+}
+
+.visa-searchbar_2 {
+  width: 80px;
+  height: 40px;
+  background: #333333;
+}
+
+.visa-text_5 {
+  cursor: pointer;
+  width: 36px;
+  height: 25px;
+  font-size: 18px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 25px;
+}
+
+.visa-searchresult_1 {
+  width: 1600px;
+  margin: 20px 0 20px 0;
+}
+
+.visa-searchresult_2 {
+  width: 50px;
+  background-color: rgba(231, 0, 17, 0.02);
+}
+
+.visa-text_6 {
+  width: 17px;
+  height: 33px;
+  font-size: 24px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  line-height: 33px;
+}
+
+.visa-searchresult_3 {
+  width: 1540px;
+  margin: 0 0 0 10px
+}
+/* Path: src\components\VisaCountriesPageContent\VisaCountriesPageContent.js */

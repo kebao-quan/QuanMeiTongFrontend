@@ -13,7 +13,8 @@
 }
 
 .image_1 {
-  width: 62px;
+  cursor: pointer;
+  width: 239px;
   height: 46px;
   margin: 22px 0 0 160px;
 }
@@ -67,6 +68,7 @@
   white-space: nowrap;
   line-height: 25px;
   margin: 38px 0 0 24px;
+  text-decoration: none;
 }
 
 .text-wrapper_2 {
@@ -85,6 +87,7 @@
   white-space: nowrap;
   line-height: 25px;
   margin: 34px 0 0 24px;
+  text-decoration: none;
 }
 
 .text-wrapper_3 {

@@ -1,11 +1,14 @@
 import "./App.css";
 import "./common.css";
-import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import VisaCountries from "./pages/Visa_Countries";
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
+
+import NavBar from "./components/NavBar/NavBar";
+
 
 function App() {
   return (

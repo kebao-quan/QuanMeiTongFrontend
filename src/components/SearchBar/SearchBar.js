@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import DropdownMenu from "./DropdownMenu";
 import "./SearchBar.css";
 
+import sous from "./images/sous.png";
+
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isFocused, setFocused] = useState(false);
@@ -16,16 +18,16 @@ const SearchBar = () => {
     console.log(searchTerm);
   };
 
-  const handleClickOutside = event => {
+  const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
       setFocused(false);
     }
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -37,12 +39,7 @@ const SearchBar = () => {
       <div className="group_5 flex-row justify-between">
         <div className="box_1 flex-row">
           <div className="image-text_1 flex-row justify-between">
-            <img
-              className="label_2"
-              src={
-                "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng73df93eca1c333b15333df621003416bcb8369e08b2fd92df543c310224a2b4c"
-              }
-            />
+            <img className="label_2" src={sous} />
             <input
               className="text-group_1"
               type="text"
@@ -57,9 +54,7 @@ const SearchBar = () => {
           <span className="text_9">快速申请出国签证</span>
         </button>
       </div>
-      {isFocused && (
-        <DropdownMenu ref={ref}/>
-      )}
+      {isFocused && <DropdownMenu ref={ref} />}
     </div>
   );
 };

@@ -323,16 +323,17 @@
   margin-bottom: 0;
 }
 
-.image_9-0:hover {
-  transform: scale(1.1); /* 放大10% */
-  cursor: pointer;
-}
-
 .image_9-0 {
   width: 160px;
   height: 100px;
   transition: transform 0.3s ease-in-out;
 }
+
+.image_9-0:hover {
+  transform: scale(1.1); /* 放大10% */
+  cursor: pointer;
+}
+
 
 .text-group_2-0 {
   height: 20px;

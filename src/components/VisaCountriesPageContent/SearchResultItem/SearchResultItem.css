@@ -1,0 +1,75 @@
+.search-result-item_1 {
+  width: 1540px;
+  height: 90px;
+  background-color: #ffffff;
+}
+
+.search-result-item-image_1 {
+  width: 80px;
+  height: 50px;
+  margin: 0 0 0 10px;
+}
+
+.search-result-item-text_1 {
+  width: 72px;
+  height: 25px;
+  font-size: 18px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 25px;
+  margin: 0 0 0 20px;
+  white-space: nowrap;
+}
+
+.search-result-item-image_2 {
+  width: 14px;
+  height: 14px;
+  margin: 0 0 0 883px;
+}
+
+.search-result-item-text_2 {
+  cursor: pointer;
+  width: 56px;
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  line-height: 20px;
+  margin: 0 0 0 6px;
+}
+
+.search-result-item-text_2:hover {
+  color: rgba(231, 0, 17, 1);
+}
+
+.search-result-item-image_3 {
+  width: 14px;
+  height: 14px;
+  margin: 0 0 0 19px;
+}
+
+.search-result-item-button_1 {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  background: #333333;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 20px;
+  margin: 0 0 0 20px;
+}
+
+.search-result-item-button_1:hover {
+  background: #FF9600;
+}
+
+.search-result-horizontal-line {
+  width: 1530px;
+  height: 1px;
+  border: 1px solid #eeeff0;
+  margin: -2px 0 0 10px;
+}

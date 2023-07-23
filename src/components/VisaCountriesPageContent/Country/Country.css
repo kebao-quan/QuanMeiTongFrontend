@@ -1,0 +1,100 @@
+.visa-country_101 {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  margin: 0 40px 40px 0;
+  cursor: pointer;
+}
+
+.visa-country_101:nth-child(5n) {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  margin: 0 0 40px 0;
+}
+
+.visa-image_101 {
+  width: 100%;
+  height: 100%;
+}
+
+.visa-image-overlay_101 {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  width: 260px;
+  height: 40px;
+  background: rgba(51, 51, 51, 0.6);
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.visa-country_101:hover .visa-image-overlay_101 {
+  opacity: 0;
+}
+
+.visa-flag_101 {
+  width: 30px;
+  height: 20px;
+  margin: 0 10px 0 10px;
+}
+
+.visa-country-name_101 {
+  width: 36px;
+  height: 18px;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 18px;
+  white-space: nowrap;
+  margin: 0 90px 0 0;
+}
+
+.visa-apply-text_101 {
+  width: 74px;
+  height: 18px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 18px;
+}
+
+.visa-image-overlay_102 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.6);
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.visa-country_101:hover .visa-image-overlay_102 {
+  opacity: 1;
+}
+
+.visa-textwrapper_101 {
+  border-radius: 50%;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  width: 80px;
+  margin: 60px 0 0 90px;
+}
+
+.visa-apply-text_102 {
+  width: 40px;
+  height: 52px;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  font-family: PingFangSC-Regular;
+  font-weight: NaN;
+  text-align: right;
+  line-height: 26px;
+  margin: 14px 0 0 20px;
+}

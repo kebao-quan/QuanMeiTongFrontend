@@ -1,7 +1,6 @@
 .group_3 {
   height: 720px;
-  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5a0ae74542b74e7c40d88ecd5fe462f78b3c08e70989b72b1b26b7a496be9065)
-    100% no-repeat;
+  background: url("./images/banner.png") 100% no-repeat;
   background-size: 100% 100%;
   margin-bottom: 1px;
   width: 1920px;
@@ -14,7 +13,7 @@
 }
 
 .block_2 {
-  background-color: #D23028;
+  background-color: #d23028;
   width: 120px;
   height: 4px;
 }
@@ -239,7 +238,6 @@
   height: 190px;
 }
 
-
 .grid_0 {
   width: 660px;
   height: 160px;
@@ -262,6 +260,6 @@
 }
 
 .text_102:hover {
-  color: #D23028;
+  color: #d23028;
   cursor: pointer;
 }
