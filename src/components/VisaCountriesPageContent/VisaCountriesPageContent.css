@@ -1,15 +1,11 @@
 .visa-background {
   background-color: #f6f6f6;
-  align-items: center;
-  min-height: 100vh;
 }
 
 .visa-bannner {
   background-image: url("./images/qzgjbj.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  align-items: center;
-  min-height: 100vh;
   width: 1920px;
   height: 720px;
 }
@@ -68,7 +64,7 @@
   font-weight: 400;
   color: #666666;
   line-height: 25px;
-  margin: 0 0 0 70px;
+  margin: 1px 0 0 70px;
 }
 
 .visa-text-group_2 {

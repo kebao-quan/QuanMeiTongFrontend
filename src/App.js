@@ -1,23 +1,14 @@
-import "./App.css";
 import "./common.css";
-import Home from "./pages/Home";
-import VisaCountries from "./pages/Visa_Countries";
 
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-
-
-import NavBar from "./components/NavBar/NavBar";
-
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
 
 function App() {
+  //根据路由表生成路由
+  const element = useRoutes(routes);
   return (
     <div className="App">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/visa" element={<VisaCountries />} />
-      </Routes>
+      {element}
     </div>
   );
 }

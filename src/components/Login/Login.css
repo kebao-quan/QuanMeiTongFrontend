@@ -1,0 +1,94 @@
+.login-group_1 {
+  width: 1200px;
+  height: 700px;
+  background: #ffffff;
+  box-shadow: 14px 14px 24px 0px rgba(51, 51, 51, 0.2);
+}
+
+.login-group_2 {
+  background-image: url("./images/bbjj.png");
+  width: 560px;
+  height: 700px;
+}
+
+.login-logo {
+  width: 204px;
+  height: 143px;
+  margin: 160px 0 0 0;
+}
+
+.login-image_1 {
+  width: 100%;
+  height: 100%;
+}
+
+.login-text_1 {
+  width: 264px;
+  height: 33px;
+  font-size: 24px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 33px;
+  margin: 46px 0 0 0;
+}
+
+.login-text_2 {
+  width: 313px;
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 20px;
+  margin: 121px 0 0 0;
+}
+
+.login-group_3 {
+  width: 434px;
+  height: 18px;
+  margin: 20px 0 0 0;
+}
+
+.login-dot_1 {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  margin: 7px 0 0 50px;
+}
+
+.login-dot_1:nth-child(1) {
+  margin: 7px 0 0 0;
+}
+
+.login-text_3 {
+  width: 56px;
+  height: 18px;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 18px;
+  margin: 0 0 0 10px;
+}
+
+.login-group_4 {
+  width: 354px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  margin: 39px 0 0 0;
+}
+
+.login-text_4 {
+  width: 289px;
+  height: 33px;
+  font-size: 24px;
+  font-family: "PingFang SC Medium";
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 33px;
+}

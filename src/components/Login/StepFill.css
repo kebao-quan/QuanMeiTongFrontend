@@ -1,0 +1,103 @@
+/* 自定义CheckBox */
+.login-checkbox-container {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: #f7f7f7;
+  border: 1px solid #666666;
+  border-radius: 50%;
+}
+
+.login-checkbox-check {
+  width: 10px;
+  height: 10px;
+  background: #666666;
+  border-radius: 50%;
+}
+
+.login-group_101 {
+  width: 520px;
+  height: 25px;
+  margin: 60px 0 0 0;
+}
+
+.login-group_102 {
+  cursor: pointer;
+  margin: 0 0 0 20px;
+}
+
+.login-group_103 {
+  cursor: pointer;
+  margin: 0 0 0 40px;
+}
+
+.login-text_101 {
+  width: 72px;
+  height: 25px;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  line-height: 25px;
+}
+
+.login-text_102 {
+  height: 25px;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0 0 0 10px;
+}
+
+.login-checkbox_2 {
+  margin: 0 0 0 40px;
+}
+
+.login-group_104 {
+  width: 520px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #eeeff0;
+  margin: 20px 0 0 0;
+}
+
+.login-input_101 {
+  width: 480px;
+  height: 25px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 25px;
+  margin: 0 0 0 20px;
+}
+
+.login-image_101 {
+    cursor: pointer;
+    width: 18px;
+    height: 11px;
+    margin: 0 0 0 -15px;
+}
+
+.login-group_105 {
+  cursor: pointer;
+  width: 520px;
+  height: 80px;
+  background: #333333;
+  border-radius: 10px;
+  margin: 60px 0 0 0;
+}
+
+.login-text_103 {
+  width: 48px;
+  height: 33px;
+  font-size: 24px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 33px;
+}

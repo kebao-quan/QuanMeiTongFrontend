@@ -1,0 +1,27 @@
+.continent_201 {
+  border: 1px solid #eeeff0;
+  width: 200px;
+  height: 50px;
+  background: #ffffff;
+  margin: 0 10px 0 0;
+}
+
+.continent_202 {
+  width: 28px;
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.continent_201-hover {
+  background: #333333;
+}
+
+.continent_202-hover {
+    color: #ffffff;
+}
+

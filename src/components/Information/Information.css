@@ -1,6 +1,6 @@
 .group_13 {
   height: 720px;
-  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng935a6e52f16edfbde45a2d98ec2bdd6b9b56321bfccce1f5628c3c1196781ffe)
+  background: url("./images/bj2.png")
     100% no-repeat;
   background-size: 100% 100%;
   width: 1920px;
@@ -31,7 +31,7 @@
 .group_14 {
   width: 1012px;
   height: 100px;
-  margin: 96px 0 129px 353px;
+  margin: 96px 0 129px 313px;
 }
 .image_11 {
   width: 100px;
@@ -53,7 +53,6 @@
   color: rgba(51, 51, 51, 1);
   font-size: 18px;
   font-family: PingFangSC-Regular;
-  font-weight: NaN;
   text-align: right;
   white-space: nowrap;
   line-height: 18px;
@@ -80,7 +79,6 @@
   color: rgba(51, 51, 51, 1);
   font-size: 18px;
   font-family: PingFangSC-Regular;
-  font-weight: NaN;
   text-align: right;
   white-space: nowrap;
   line-height: 18px;
@@ -107,7 +105,6 @@
   color: rgba(51, 51, 51, 1);
   font-size: 18px;
   font-family: PingFangSC-Regular;
-  font-weight: NaN;
   text-align: right;
   white-space: nowrap;
   line-height: 18px;
@@ -134,7 +131,6 @@
   color: rgba(51, 51, 51, 1);
   font-size: 18px;
   font-family: PingFangSC-Regular;
-  font-weight: NaN;
   text-align: right;
   white-space: nowrap;
   line-height: 18px;
@@ -155,7 +151,6 @@
   overflow-wrap: break-word;
   color: rgba(255, 255, 255, 1);
   font-size: 40px;
-  font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;

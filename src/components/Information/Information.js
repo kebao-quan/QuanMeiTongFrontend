@@ -20,24 +20,24 @@ const Information = () => {
             </span>
           </div>
           <div className="group_14 flex-row">
-            <img className="image_11" src={Image1} />
+            <img className="image_11" src={Image1} alt=""/>
             <div className="image-text_7 flex-col justify-between">
-              <img className="image_12" src={zytd} />
+              <img className="image_12" src={zytd} alt="" />
               <span className="text-group_8">专业团队</span>
             </div>
-            <img className="image_13" src={Image2} />
+            <img className="image_13" src={Image2} alt="" />
             <div className="image-text_8 flex-col justify-between">
-              <img className="label_7" src={jyff} />
+              <img className="label_7" src={jyff} alt="" />
               <span className="text-group_9">经验丰富</span>
             </div>
-            <img className="image_14" src={Image3} />
+            <img className="image_14" src={Image3} alt="" />
             <div className="section_1 flex-col justify-between">
-              <img className="image_15" src={aqkk} />
+              <img className="image_15" src={aqkk} alt="" />
               <span className="text_29">安全可靠</span>
-            </div>
-            <img className="image_16" src={Image4} />
+            </div> 
+            <img className="image_16" src={Image4} alt=""/>
             <div className="section_2 flex-col justify-between">
-              <img className="label_8" src={fwzd} />
+              <img className="label_8" src={fwzd} alt="" />
               <span className="text_30">服务周到</span>
             </div>
           </div>

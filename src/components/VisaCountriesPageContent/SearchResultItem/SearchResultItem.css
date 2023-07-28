@@ -5,6 +5,7 @@ width: 100%;
 }
 
 .search-result-item-image_1 {
+  cursor: pointer;
   width: 80px;
   height: 50px;
   margin: 0 0 0 10px;
@@ -22,6 +23,10 @@ width: 100%;
   white-space: nowrap;
 }
 
+.search-result-item_2{
+  cursor: pointer;
+}
+
 .search-result-item-image_2 {
   width: 14px;
   height: 14px;
@@ -29,7 +34,6 @@ width: 100%;
 }
 
 .search-result-item-text_2 {
-  cursor: pointer;
   width: 56px;
   height: 20px;
   font-size: 14px;

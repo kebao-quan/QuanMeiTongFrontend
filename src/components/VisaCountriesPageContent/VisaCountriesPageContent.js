@@ -8,7 +8,7 @@ import { pinyin } from "pinyin-pro";
 import {
   getCountriesByLetter,
   getCountriesByName,
-} from "../../utils/CountryList";
+} from "../../utils/CountryData";
 
 import mg from "./images/mg.png";
 import hg from "./images/hg.png";
@@ -56,7 +56,7 @@ const VisaCountriesPageContent = () => {
     setSearchTerm(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSearchSubmit = (event) => {
     event.preventDefault();
     if (searchTerm === "") {
       setSelectedLetter("A");
@@ -87,7 +87,7 @@ const VisaCountriesPageContent = () => {
   };
 
   return (
-    <div className="visa-background flex-col">
+    <div className="visa-background flex-col align-center">
       <div className="visa-bannner flex-col"></div>
       <div className="visa-group_2 flex-col">
         <div className="visa-text-group_1 flex-col">
@@ -122,7 +122,7 @@ const VisaCountriesPageContent = () => {
           </div>
           <div className="visa-searchbar_1 flex-row align-center">
             <img className="visa-search-icon_1" src={sous} alt=""></img>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSearchSubmit}>
               <input
                 className="visa-text-group_3"
                 type="text"
@@ -134,7 +134,7 @@ const VisaCountriesPageContent = () => {
           </div>
           <button
             className="visa-searchbar_2 justify-center align-center"
-            onClick={handleSubmit}
+            onClick={handleSearchSubmit}
           >
             <span className="visa-text_5">搜索</span>
           </button>
