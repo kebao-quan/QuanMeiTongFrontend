@@ -87,79 +87,81 @@ const VisaCountriesPageContent = () => {
   };
 
   return (
-    <div className="visa-background flex-col align-center">
+    <div className="visa-background">
       <div className="visa-bannner flex-col"></div>
-      <div className="visa-group_2 flex-col">
-        <div className="visa-text-group_1 flex-col">
-          <p className="visa-text_1">热门国家</p>
-          <p className="visa-text_2">Popular countries</p>
-        </div>
-        <div className="visa-grid_1 flex-row">
-          <Country imageURL={mg} name="美国" />
-          <Country imageURL={hg} name="韩国" />
-          <Country imageURL={rb} name="日本" />
-          <Country imageURL={adly} name="澳大利亚" />
-          <Country imageURL={fg} name="法国" />
-          <Country imageURL={dg} name="德国" />
-          <Country imageURL={mlxy} name="马来西亚" />
-          <Country imageURL={yn} name="英国" />
-          <Country imageURL={tg} name="泰国" />
-          <Country imageURL={xjp} name="新加坡" />
-        </div>
-      </div>
-      <div className="flex-col">
-        <div className="visa-search_1 flex-row align-center">
-          <span className="visa-text_3 unselectable">按拼音查找</span>
-          <div className="visa-text-group_2 flew-row align-center">
-            {searchLetters.map((letter, index) => (
-              <Letter
-                key={index}
-                letter={letter}
-                handleClick={handleLetterClick}
-                selected={selectedLetter === letter}
-              />
-            ))}
+      <div className="visa-wrapper_1">
+        <div className="visa-group_2 flex-col">
+          <div className="visa-text-group_1 flex-col">
+            <p className="visa-text_1">热门国家</p>
+            <p className="visa-text_2">Popular countries</p>
           </div>
-          <div className="visa-searchbar_1 flex-row align-center">
-            <img className="visa-search-icon_1" src={sous} alt=""></img>
-            <form onSubmit={handleSearchSubmit}>
-              <input
-                className="visa-text-group_3"
-                type="text"
-                value={searchTerm}
-                onChange={handleChange}
-                placeholder="查找你的目的地国家"
-              />
-            </form>
+          <div className="visa-grid_1 flex-row">
+            <Country imageURL={mg} name="美国" />
+            <Country imageURL={hg} name="韩国" />
+            <Country imageURL={rb} name="日本" />
+            <Country imageURL={adly} name="澳大利亚" />
+            <Country imageURL={fg} name="法国" />
+            <Country imageURL={dg} name="德国" />
+            <Country imageURL={mlxy} name="马来西亚" />
+            <Country imageURL={yn} name="英国" />
+            <Country imageURL={tg} name="泰国" />
+            <Country imageURL={xjp} name="新加坡" />
           </div>
-          <button
-            className="visa-searchbar_2 justify-center align-center"
-            onClick={handleSearchSubmit}
-          >
-            <span className="visa-text_5">搜索</span>
-          </button>
         </div>
-        <div className="visa-searchresult_1 flex-row">
-          {searchResultList.length !== 0 && (
-            <>
-              <div className="visa-searchresult_2 flex-col justify-center align-center">
-                <span className="visa-text_6">{selectedLetter}</span>
-              </div>
-              <div className="visa-searchresult_3 flex-col">
-                {searchResultList.map((country, index) => (
-                  <SearchResultItem key={index} country={country} />
-                ))}
-              </div>
-            </>
-          )}
-          {searchResultList.length === 0 && (
-            <div className="visa-searchresult_4 flex-col align-center">
-              <span className="visa-text_7">暂无搜索的国家</span>
-              <button className="visa-clear-search" onClick={handleClear}>
-                <span className="visa-text_8">清空搜索</span>
-              </button>
+        <div className="flex-col">
+          <div className="visa-search_1 flex-row align-center">
+            <span className="visa-text_3 unselectable">按拼音查找</span>
+            <div className="visa-text-group_2 flew-row align-center">
+              {searchLetters.map((letter, index) => (
+                <Letter
+                  key={index}
+                  letter={letter}
+                  handleClick={handleLetterClick}
+                  selected={selectedLetter === letter}
+                />
+              ))}
             </div>
-          )}
+            <div className="visa-searchbar_1 flex-row align-center">
+              <img className="visa-search-icon_1" src={sous} alt=""></img>
+              <form onSubmit={handleSearchSubmit}>
+                <input
+                  className="visa-text-group_3"
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleChange}
+                  placeholder="查找你的目的地国家"
+                />
+              </form>
+            </div>
+            <button
+              className="visa-searchbar_2 justify-center align-center"
+              onClick={handleSearchSubmit}
+            >
+              <span className="visa-text_5">搜索</span>
+            </button>
+          </div>
+          <div className="visa-searchresult_1 flex-row">
+            {searchResultList.length !== 0 && (
+              <>
+                <div className="visa-searchresult_2 flex-col justify-center align-center">
+                  <span className="visa-text_6">{selectedLetter}</span>
+                </div>
+                <div className="visa-searchresult_3 flex-col">
+                  {searchResultList.map((country, index) => (
+                    <SearchResultItem key={index} country={country} />
+                  ))}
+                </div>
+              </>
+            )}
+            {searchResultList.length === 0 && (
+              <div className="visa-searchresult_4 flex-col align-center">
+                <span className="visa-text_7">暂无搜索的国家</span>
+                <button className="visa-clear-search" onClick={handleClear}>
+                  <span className="visa-text_8">清空搜索</span>
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

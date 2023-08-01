@@ -1,3 +1,30 @@
+.visaapply-districts-group_1 {
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  background: #f7f7f7;
+  color: #666666;
+  margin: 0 20px 20px 0;
+}
+
+.visaapply-districts-group_1:nth-child(11n) {
+  margin-right: 0;
+}
+
+.visaapply-districts-group_1-selected {
+  background-color: #D23028 !important;
+  color: #ffffff !important;
+}
+
+.visaapply-districts-text_1 {
+  height: 25px;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 25px;
+  white-space: nowrap;
+}
+
 .visaapply-background {
   background-color: #f6f6f6;
 }
@@ -12,6 +39,7 @@
 
 .visaapply-group_2 {
   width: 1600px;
+  min-height: 200px;
   background-color: #ffffff;
   align-items: center;
   margin: -260px 0 40px 0;
@@ -50,4 +78,49 @@
   flex-wrap: wrap;
   align-content: flex-start;
   margin: 40px 0 62px 0;
+}
+
+.visaapply-group_4 {
+  width: 1600px;
+  height: 1000px;
+}
+
+.visaapply-group_5 {
+  width: 1420px;
+  height: 190px;
+  margin: 85px 0 0 0;
+}
+
+.visaapply-group_6 {
+  width: 120px;
+  height: 190px;
+}
+
+.visaapply-text_3 {
+  width: 90px;
+  height: 25px;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 13px 0 0 0;
+}
+
+.visaapply-grid_2 {
+  width: 1300px;
+  height: 190px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.visaapply-group_7 {
+  width: 1420px;
+  height: 50px;
+  margin: 40px 0 0 0;
+  background-color: #e70011;
+}
+
+.visaapply-text_4 {
+  width: 120px;
+  background-color: yellow;
 }

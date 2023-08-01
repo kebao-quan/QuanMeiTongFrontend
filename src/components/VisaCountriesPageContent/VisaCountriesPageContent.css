@@ -10,12 +10,15 @@
   height: 720px;
 }
 
-.visa-group_2 {
+.visa-wrapper_1 {
   width: 1600px;
+  margin: -260px auto;
+}
+
+.visa-group_2 {
   height: 680px;
   background-color: #ffffff;
   align-items: center;
-  margin: -260px 0 0 0;
 }
 
 .visa-text-group_1 {
