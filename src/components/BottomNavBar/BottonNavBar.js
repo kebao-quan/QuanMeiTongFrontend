@@ -86,9 +86,9 @@ const BottonNavBar = () => {
           <span className="text_37">登录/注册</span>
         </NavLink>
       </div>
-      <div className="text-wrapper_13 flex-col">
+      <div className="text-wrapper_13 flex-row justify-center align-center">
         <span className="text_19">
-          公安备案&nbsp;1234567890号&nbsp;|&nbsp;沪ICP1234567890号
+          公安备案|&nbsp;沪ICP备18035802号-20
         </span>
       </div>
     </>

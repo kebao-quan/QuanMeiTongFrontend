@@ -1,22 +1,28 @@
+.navbar-container {
+  width: 100vw;
+}
+
 .navbar-group_1 {
   background-color: #d23028;
-  width: 1920px;
   height: 4px;
 }
 
 .navbar-group_2 {
-  background-color: rgba(255, 255, 255, 1);
-  width: 1920px;
+  max-width: 1600px;
   height: 90px;
   font-family: "Microsoft YaHei";
-  justify-content: flex-center;
+  margin: 0 auto;
+}
+
+.bread {
+  width: 5px;
+  height: 100%;
 }
 
 .navbar-image_1 {
   cursor: pointer;
   width: 239px;
   height: 46px;
-  margin: 0 0 0 160px;
 }
 
 .navbar-label_1 {
@@ -41,7 +47,22 @@
 .navbar-link-wrapper_1 {
   width: 480px;
   height: 100%;
-  margin: 0 0 0 355px;
+  /* margin: 0 0 0 355px; */
+}
+
+@media only screen and (max-width: 1272px) {
+  .navbar-link-wrapper_1 {
+    display: none;
+  }
+  .navbar-label_1 {
+    display: none;
+  }
+  .navbar-text_2 {
+    display: none;
+  }
+  .navbar-login-button_1 {
+    margin: 0 5px 0 0 !important;
+  }
 }
 
 .navbar-text-wrapper_1 {
@@ -53,7 +74,7 @@
 }
 
 .navbar-overlay_1 {
-  background-color: rgba(32,33,36,.04);
+  background-color: rgba(32, 33, 36, 0.04);
   transition: opacity 0.5s ease;
   opacity: 0;
   position: absolute;
@@ -64,7 +85,6 @@
 .navbar-text-wrapper_1:hover .navbar-overlay_1 {
   opacity: 1;
 }
-
 
 .navbar-text_3 {
   width: 72px;
@@ -91,8 +111,6 @@
 }
 
 .navbar-login-text_1 {
-  width: 81px;
-  height: 25px;
   overflow-wrap: break-word;
   color: #d23028;
   font-size: 18px;
@@ -113,4 +131,26 @@
 
 .no-decoration {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 764px) {
+  .navbar-group_2 {
+    height: 46px;
+  }
+  .navbar-image_1 {
+    width: 150px;
+    height: 26px;
+  }
+  .navbar-login-button_1 {
+    height: 25px;
+    width: 75px;
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+  .navbar-login-text_1 {
+    font-size: 12px;
+  }
+  .navbar-group_2_1 {
+    margin: 0 auto;
+  }
 }

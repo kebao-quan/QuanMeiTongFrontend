@@ -37,8 +37,8 @@ const HomeSearchBar = () => {
   return (
     <div className="group_3 flex-col" ref={ref}>
       <div className="group_5 flex-row justify-between">
-        <div className="box_1 flex-row">
-          <div className="image-text_1 flex-row justify-between">
+        <div className="box_1 flex-row align-center">
+          <div className="image-text_1 flex-row align-center">
             <img className="label_2" src={sous} alt=""/>
             <input
               className="text-group_1"
@@ -50,7 +50,7 @@ const HomeSearchBar = () => {
             />
           </div>
         </div>
-        <button className="text-wrapper_7 flex-col" onClick={handleSubmit}>
+        <button className="text-wrapper_7 flex-col justify-center align-center" onClick={handleSubmit}>
           <span className="text_9">快速申请出国签证</span>
         </button>
       </div>

@@ -1,9 +1,10 @@
 .group_3 {
-  height: 720px;
-  background: url("./images/banner.png") 100% no-repeat;
-  background-size: 100% 100%;
+  background: url("./images/banner.png") no-repeat;
+  background-size: contain;
   margin-bottom: 1px;
-  width: 1920px;
+  width: 100vw;
+  height: 0;
+  padding-bottom: 37.55%;
 }
 
 .group_4 {
@@ -15,19 +16,20 @@
 .group_5 {
   width: 660px;
   height: 60px;
-  margin: 541px 0 115px 620px;
+  margin: 541px auto;
+  margin-top: 28%;
 }
 
 .box_1 {
   background-color: rgba(255, 255, 255, 1);
-  width: 440px;
-  height: 60px;
+  width: 66.6%;
+  height: 100%;
 }
 
 .image-text_1 {
-  width: 196px;
+  width: 395px;
   height: 25px;
-  margin: 18px 0 0 28px;
+  margin: 0 0 0 28px;
 }
 
 .label_2 {
@@ -36,8 +38,8 @@
 }
 
 .text-group_1 {
-  width: 370px;
   height: 25px;
+  width: 93.7%;
   border: none;
   outline: none;
   overflow-wrap: break-word;
@@ -56,8 +58,8 @@
 
 .text-wrapper_7 {
   background-color: rgba(51, 51, 51, 1);
-  height: 60px;
-  width: 220px;
+  height: 100%;
+  width: 33.3%;
   cursor: pointer;
 }
 
@@ -71,9 +73,7 @@
   text-align: left;
   white-space: nowrap;
   line-height: 25px;
-  margin: 18px 0 0 38px;
 }
-
 
 /* 国家Grid */
 .text-wrapper_101 {
@@ -105,4 +105,30 @@
 .text_102:hover {
   color: #d23028;
   cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  .group_5 {
+    width: 330px;
+    height: 30px;
+  }
+  .image-text_1 {
+    width: 197.5px;
+    height: 13px;
+    margin: 0 0 0 14px;
+  }
+  .label_2 {
+    width: 12px;
+    height: 12px;
+  }
+  .text-group_1 {
+    height: 12.5px;
+    font-size: 9px;
+  }
+  .text_9 {
+    width: 72px;
+    height: 12.5px;
+    font-size: 9px;
+    line-height: 12.5px;
+  }
 }
