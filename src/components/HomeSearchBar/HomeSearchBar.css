@@ -107,7 +107,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 764px) {
   .group_5 {
     width: 330px;
     height: 30px;

@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { Dropdown, DropdownButton } from "react-bootstrap";
+import styled from "styled-components";
 
 import "./NavBar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,11 +11,18 @@ import logo from "./images/logo.png";
 import dianhua from "./images/dianhua.png";
 
 import LinkSection from "./LinkSection";
-import { useMediaQuery } from "react-responsive";
-import { Dropdown, DropdownButton } from "react-bootstrap";
 
-function BasicButtonExample() {
-  const isMobile = useMediaQuery({ query: "(max-width: 1272px)" }); // Adjust this value to your needs
+const Containter = styled.div`
+  width: 100vw;
+
+  & .horizontal-line {
+    background-color: #d23028;
+    height: 4px;
+  }
+`;
+
+function Menu() {
+  const isMobile = useMediaQuery({ query: "(max-width: 1272px)" });
 
   return (
     isMobile && (
@@ -21,7 +31,7 @@ function BasicButtonExample() {
         id="dropdown-basic-button"
         size="sm"
         title="菜单"
-        style={{marginLeft : "5px"}}
+        style={{ marginLeft: "5px" }}
       >
         <Dropdown.Item href="/">网站首页</Dropdown.Item>
         <Dropdown.Item href="/countries">签证国家</Dropdown.Item>
@@ -34,10 +44,10 @@ function BasicButtonExample() {
 
 const Navbar = () => {
   return (
-    <div className="navbar-container">
-      <div className="navbar-group_1" />
+    <Containter>
+      <div className="horizontal-line" />
       <div className="navbar-group_2 flex-row justify-between align-center">
-        <BasicButtonExample />
+        <Menu />
         <div className="navbar-group_2_1 flex-row align-center">
           <NavLink to="/">
             <img className="navbar-image_1" src={logo} alt="" />
@@ -63,7 +73,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Containter>
   );
 };
 

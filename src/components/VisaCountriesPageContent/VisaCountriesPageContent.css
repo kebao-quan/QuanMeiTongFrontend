@@ -8,11 +8,12 @@
   background-repeat: no-repeat;
   width: 1920px;
   height: 720px;
+  margin-bottom: -260px;
 }
 
 .visa-wrapper_1 {
   width: 1600px;
-  margin: -260px auto;
+  margin: 0 auto;
 }
 
 .visa-group_2 {
