@@ -1,16 +1,16 @@
 .visaapply-country-group_1 {
-  width: 160px;
-  height: 130px;
-  margin: 0 20px 40px 0;
+  width: 16.0rem;
+  height: 13.0rem;
+  margin: 0 2.0rem 4.0rem 0;
 }
 
 .visaapply-country-group_1:nth-child(8n) {
-  margin: 0 0 40px 0;
+  margin: 0 0 4.0rem 0;
 }
 
 .visaapply-country-group_2 {
   cursor: pointer;
-  border: 1px solid #eeeff0;
+  border: .1rem solid #eeeff0;
 }
 
 .visaapply-country-image {
@@ -19,16 +19,16 @@
 }
 
 .visaapply-country-group_3 {
-  width: 160px;
-  height: 30px;
+  width: 16.0rem;
+  height: 3.0rem;
 }
 
 .visaapply-country-text_1 {
-  height: 20px;
-  font-size: 14px;
+  height: 2.0rem;
+  font-size: 1.4rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #333333;
-  line-height: 20px;
+  line-height: 2.0rem;
   white-space: nowrap;
 }

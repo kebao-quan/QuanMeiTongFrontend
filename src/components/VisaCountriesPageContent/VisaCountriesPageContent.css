@@ -6,18 +6,18 @@
   background-image: url("./images/qzgjbj.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  width: 1920px;
-  height: 720px;
-  margin-bottom: -260px;
+  width: 192.0rem;
+  height: 72.0rem;
+  margin-bottom: -26.0rem;
 }
 
 .visa-wrapper_1 {
-  width: 1600px;
+  width: 160.0rem;
   margin: 0 auto;
 }
 
 .visa-group_2 {
-  height: 680px;
+  height: 68.0rem;
   background-color: #ffffff;
   align-items: center;
 }
@@ -28,19 +28,19 @@
 }
 
 .visa-text_1 {
-  font-size: 30px;
+  font-size: 3.0rem;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #333333;
-  margin: 60px 0 0 0;
+  margin: 6.0rem 0 0 0;
 }
 
 .visa-text_2 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #666666;
-  margin: 10px 0 0 0;
+  margin: 1.0rem 0 0 0;
 }
 
 .visa-grid_1 {
@@ -48,59 +48,59 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
-  margin: 40px 0 0 0;
-  width: 1460px;
-  height: 200px;
+  margin: 4.0rem 0 0 0;
+  width: 146.0rem;
+  height: 20.0rem;
 }
 
 .visa-search_1 {
-  width: 1600px;
-  height: 80px;
+  width: 160.0rem;
+  height: 8.0rem;
   background: #ffffff;
-  margin: 20px 0 0 0;
+  margin: 2.0rem 0 0 0;
 }
 
 .visa-text_3 {
-  width: 108px;
-  height: 25px;
-  font-size: 18px;
+  width: 10.8rem;
+  height: 2.5rem;
+  font-size: 1.8rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #666666;
-  line-height: 25px;
-  margin: 1px 0 0 70px;
+  line-height: 2.5rem;
+  margin: .1rem 0 0 7.0rem;
 }
 
 .visa-text-group_2 {
-  width: 924px;
-  height: 25px;
+  width: 92.4rem;
+  height: 2.5rem;
 }
 
 .visa-searchbar_1 {
-  width: 300px;
-  height: 40px;
+  width: 30.0rem;
+  height: 4.0rem;
   background: #ffffff;
-  border: 1px solid #dddddd;
+  border: .1rem solid #dddddd;
 }
 
 .visa-search-icon_1 {
-  width: 24px;
-  height: 24px;
-  margin: 0 0 0 10px;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 0 0 1.0rem;
 }
 
 .visa-text-group_3 {
-  width: 246px;
-  height: 25px;
+  width: 24.6rem;
+  height: 2.5rem;
   border: none;
   outline: none;
   overflow-wrap: break-word;
   color: black;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: PingFangSC-Regular;
   text-align: left;
   white-space: nowrap;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 1.0rem;
 }
 
 .visa-text-group_3::placeholder {
@@ -109,8 +109,8 @@
 
 .visa-searchbar_2 {
   cursor: pointer;
-  width: 80px;
-  height: 40px;
+  width: 8.0rem;
+  height: 4.0rem;
   background: #333333;
 }
 
@@ -119,38 +119,38 @@
 }
 
 .visa-text_5 {
-  width: 36px;
-  height: 25px;
-  font-size: 18px;
+  width: 3.6rem;
+  height: 2.5rem;
+  font-size: 1.8rem;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #ffffff;
-  line-height: 25px;
+  line-height: 2.5rem;
 }
 
 .visa-searchresult_1 {
-  width: 1600px;
-  margin: 20px 0 20px 0;
+  width: 160.0rem;
+  margin: 2.0rem 0 2.0rem 0;
 }
 
 .visa-searchresult_2 {
-  width: 50px;
+  width: 5.0rem;
   background-color: rgba(231, 0, 17, 0.02);
 }
 
 .visa-text_6 {
-  width: 17px;
-  height: 33px;
-  font-size: 24px;
+  width: 1.7rem;
+  height: 3.3rem;
+  font-size: 2.4rem;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #999999;
-  line-height: 33px;
+  line-height: 3.3rem;
 }
 
 .visa-searchresult_3 {
-  width: 1550px;
-  margin: 0 0 0 0px;
+  width: 155.0rem;
+  margin: 0 0 0 0;
 }
 
 .visa-searchresult_4 {
@@ -160,28 +160,28 @@
 }
 
 .visa-text_7 {
-  width: 126px;
-  height: 25px;
-  font-size: 18px;
+  width: 12.6rem;
+  height: 2.5rem;
+  font-size: 1.8rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #666666;
-  line-height: 25px;
-  margin: 100px 0 0 0;
+  line-height: 2.5rem;
+  margin: 10.0rem 0 0 0;
   white-space: nowrap;
 }
 
 .visa-clear-search {
   cursor: pointer;
-  width: 103px;
-  height: 40px;
-  border: 1px solid #ff9600;
-  font-size: 18px;
+  width: 103rem;
+  height: 40rem;
+  border: 1rem solid #ff9600;
+  font-size: 18rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #ff9600;
-  line-height: 25px;
-  margin: 20px 0 180px 0;
+  line-height: 25rem;
+  margin: 20rem 0 180rem 0;
 }
 
 .visa-clear-search:hover {

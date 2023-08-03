@@ -1,12 +1,12 @@
 .visa-text_4 {
-  height: 25px;
-  font-size: 18px;
+  height: 2.5rem;
+  font-size: 1.8rem;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #666666;
-  line-height: 25px;
+  line-height: 2.5rem;
   cursor: pointer;
-  margin: 0 34px 0 0;
+  margin: 0 3.4rem 0 0;
 }
 
 .visa-text_4:hover {

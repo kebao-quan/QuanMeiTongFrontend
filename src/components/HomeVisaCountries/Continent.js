@@ -6,6 +6,8 @@ function Continent({ name, handleHover, selected }) {
     height: 50px;
     width: 200px;
     background: rgba(255, 255, 255, 1);
+    display: grid;
+    place-items: center;
 
     &.selected {
       background: rgba(51, 51, 51, 1) !important;

@@ -1,11 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import styled from "styled-components";
 
 import "./NavBar.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import logo from "./images/logo.png";
 import dianhua from "./images/dianhua.png";
@@ -22,27 +21,28 @@ const Containter = styled.div`
 `;
 
 function Menu() {
+  const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 1272px)" });
   const isSmall = useMediaQuery({ query: "(max-width: 764px)" });
 
+  const toggleOpen = () => setIsOpen(!isOpen);
+
   return (
     isMobile && (
-      <DropdownButton
-        variant="light"
-        id="dropdown-basic-button"
-        size={isSmall ? "sm" : "lg"}
-        title="菜单"
-        style={{ marginLeft: "5px" }}
-      >
-        <Dropdown.Item href="/">网站首页</Dropdown.Item>
-        <Dropdown.Item href="/countries">签证国家</Dropdown.Item>
-        <Dropdown.Item href="/apply">签证申请</Dropdown.Item>
-        <Dropdown.Item href="/purchase">订购机票</Dropdown.Item>
-      </DropdownButton>
+      <div className="dropdown">
+        <button className={`dropdown-button ${isSmall ? "small" : "large"}`} onClick={toggleOpen}>菜单</button>
+        {isOpen && (
+          <div className="dropdown-menu">
+            <a className="dropdown-item" href="/">网站首页</a>
+            <a className="dropdown-item" href="/countries">签证国家</a>
+            <a className="dropdown-item" href="/apply">签证申请</a>
+            <a className="dropdown-item" href="/purchase">订购机票</a>
+          </div>
+        )}
+      </div>
     )
   );
 }
-
 const Navbar = () => {
   return (
     <Containter>
