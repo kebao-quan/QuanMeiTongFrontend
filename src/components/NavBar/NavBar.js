@@ -23,13 +23,14 @@ const Containter = styled.div`
 
 function Menu() {
   const isMobile = useMediaQuery({ query: "(max-width: 1272px)" });
+  const isSmall = useMediaQuery({ query: "(max-width: 764px)" });
 
   return (
     isMobile && (
       <DropdownButton
         variant="light"
         id="dropdown-basic-button"
-        size="sm"
+        size={isSmall ? "sm" : "lg"}
         title="菜单"
         style={{ marginLeft: "5px" }}
       >
@@ -64,7 +65,7 @@ const Navbar = () => {
           </div>
           <div className="navbar-login">
             <Link style={{ textDecoration: "none" }} to="/login">
-              <button className="navbar-login-button_1 flex-col align-center justify-center">
+              <button className="navbar-login-button_1">
                 <span className="navbar-login-text_1" to="/login">
                   登录/注册
                 </span>

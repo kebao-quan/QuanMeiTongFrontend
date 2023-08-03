@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
 import "./HomeVisaCountries.css";
 import Country from "./Country";
 import ContinentList from "./ContinentList";
@@ -19,10 +21,110 @@ import {
 
 const continents = ["热门", "亚洲", "欧洲", "美洲", "大洋洲", "非洲"];
 
+const Container = styled.div`
+  background-color: rgba(247, 247, 247, 1);
+  margin-top: -1px;
+  width: 100vw;
+  position: relative;
+`;
+
+const Info = styled.div`
+  max-width: 1600px;
+  width: 83.33333333333333%;
+  aspect-ratio: 10 / 1;
+  background-color: rgba(255, 255, 255, 1);
+  margin: 60px auto 0 auto;
+
+  & .vertical-line {
+    border: none;
+    border-left: 1px solid #edeeef;
+    height: 37.5%;
+    width: 1px;
+  }
+
+  @media (max-width: 1100px) {
+    width: 90%;
+    margin: 30px auto 0 auto;
+  }
+
+  @media (max-width: 460px) {
+    width: 95%;
+    margin: 15px auto 0 auto;
+  }
+`;
+
+const InfoItem = styled.div`
+  width: 25%;
+  font-size: 12px;
+
+  & .image {
+    height: 20%;
+    width: 20%;
+    margin: 0 0 0 12.5%;
+  }
+
+  & .block {
+    width: 31.25%;
+    aspect-ratio: 125 / 60;
+    margin: 0 0 0 4.5%;
+  }
+
+  & .text_1 {
+    display: grid;
+    place-items: center;
+    height: 20px;
+    background-color: #d23028;
+    border-radius: 13px;
+    text-align: center;
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1em;
+    /* font-family: PingFangSC-Regular, PingFang SC; */
+    text-align: left;
+    white-space: nowrap;
+    line-height: 12px;
+  }
+
+  & .text_2 {
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 2em;
+    /* font-family: PingFangSC-Regular; */
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 6px;
+
+    & .text_1 {
+      width: 40px;
+      height: 10px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    font-size: 3px;
+
+    & .text_1 {
+      width: 20px;
+      height: 5px;
+    }
+  }
+`;
+
+const CountryGrid = styled.div`
+  width: 83.33333333333333%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  margin: 0 0 80px 0;
+`;
+
 const HomeVisaCountries = () => {
   const [countries, setCountries] = useState(HotCountries);
   const [selectedContinent, setSelectedContinent] = useState("热门");
-  
 
   const handleContinentHover = (continent) => {
     setSelectedContinent(continent);
@@ -51,59 +153,43 @@ const HomeVisaCountries = () => {
   };
 
   return (
-    <div className="block_3 flex-col" >
-      <div className="group_6 flex-row">
-        <div className="group_7 flex-row align-center">
-          <div className="group_7_1 flex-row align-center">
-            <div className="image-wrapper_1 flex-col align-center">
-              <img className="image_2" src={fuwu} alt="" />
-            </div>
-            <div className="block_4 flex-col justify-between">
-              <div className="text-wrapper_8 flex-col">
-                <span className="text_10">400-168-2688</span>
-              </div>
-              <span className="text_11">24小时服务</span>
-            </div>
+    <Container className="flex-col align-center">
+      <Info className="flex-row align-center">
+        <InfoItem className="flex-row align-center">
+          <img className="image" src={fuwu} alt="" />
+          <div className="block flex-col justify-between">
+            <span className="text_1">400-168-2688</span>
+            <span className="text_2">24小时服务</span>
           </div>
-          <div className="vertical-line" />
+        </InfoItem>
+        <div className="vertical-line" />
 
-          <div className="group_7_1 flex-row align-center">
-            <div className="image-wrapper_2 flex-col align-center">
-              <img className="image_4" src={yiduiyi} alt="" />
-            </div>
-            <div className="block_5 flex-col justify-between">
-              <div className="text-wrapper_9 flex-col">
-                <span className="text_12">专人服务</span>
-              </div>
-              <span className="text_13">一对一指导</span>
-            </div>
+        <InfoItem className="flex-row align-center">
+          <img className="image" src={yiduiyi} alt="" />
+          <div className="block flex-col justify-between">
+            <span className="text_1">专人服务</span>
+            <span className="text_2">一对一指导</span>
           </div>
-          <div className="vertical-line" />
+        </InfoItem>
+        <div className="vertical-line" />
 
-          <div className="group_7_1 flex-row align-center">
-            <div className="image-wrapper_3 flex-col align-center">
-              <img className="image_6" src={yinsi} alt="" />
-            </div>
-            <div className="block_6 flex-col justify-between">
-              <div className="text-wrapper_10 flex-col">
-                <span className="text_14">放心安心</span>
-              </div>
-              <span className="text_15">隐私保护</span>
-            </div>
+        <InfoItem className="flex-row align-center">
+          <img className="image" src={yinsi} alt="" />
+          <div className="block flex-col justify-between">
+            <span className="text_1">放心安心</span>
+            <span className="text_2">隐私保护</span>
           </div>
-          <div className="vertical-line" />
+        </InfoItem>
+        <div className="vertical-line" />
 
-          <div className="image-wrapper_4 flex-col align-center">
-            <img className="image_8" src={ks} alt="" />
+        <InfoItem className="flex-row align-center">
+          <img className="image" src={ks} alt="" />
+          <div className="block flex-col justify-between">
+            <span className="text_1">省时省力</span>
+            <span className="text_2">快速出签</span>
           </div>
-          <div className="block_7 flex-col justify-between">
-            <div className="text-wrapper_11 flex-col">
-              <span className="text_16">省时省力</span>
-            </div>
-            <span className="text_17">快速出签</span>
-          </div>
-        </div>
-      </div>
+        </InfoItem>
+      </Info>
 
       <ContinentList
         continents={continents}
@@ -111,18 +197,16 @@ const HomeVisaCountries = () => {
         selectedContinent={selectedContinent}
       />
 
-      <div className="group_9 flex-row justify-between">
-        <div className="grid_1 flex-row">
-          {countries.map((country, index) => (
-            <Country
-              imageUrl={getCountryImage(country)}
-              name={country}
-              key={index}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+      <CountryGrid className="flex-row">
+        {countries.map((country, index) => (
+          <Country
+            imageUrl={getCountryImage(country)}
+            name={country}
+            key={index}
+          />
+        ))}
+      </CountryGrid>
+    </Container>
   );
 };
 
