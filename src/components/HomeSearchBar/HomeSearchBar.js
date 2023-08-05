@@ -1,11 +1,42 @@
 import React, { useState, useEffect, useRef } from "react";
 import DropdownMenu from "./DropdownMenu";
 import "./HomeSearchBar.css";
+import styled from "styled-components";
 
 import sous from "./images/sous.png";
 
 //主页Banner, 搜索栏与下拉菜单
 
+const SearchBar = styled.div`
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 25%;
+
+  & .search-bar-input {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  & .image-text_1 {
+    width: 66.6%;
+    background: #ffffff;
+  }
+
+  & .text-wrapper_7 {
+    background-color: rgba(51, 51, 51, 1);
+    width: 33.3%;
+    cursor: pointer;
+  }
+
+  @media (max-width: 764px) {
+    width: 330px;
+
+    & .search-bar-input {
+      height: 30px;
+    }
+  }
+`;
 
 const HomeSearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -36,10 +67,10 @@ const HomeSearchBar = () => {
 
   return (
     <div className="group_3 flex-col" ref={ref}>
-      <div className="group_5 flex-row justify-between">
-        <div className="box_1 flex-row align-center">
+      <SearchBar>
+        <div className="search-bar-input">
           <div className="image-text_1 flex-row align-center">
-            <img className="label_2" src={sous} alt=""/>
+            <img className="label_2" src={sous} alt="" />
             <input
               className="text-group_1"
               type="text"
@@ -49,12 +80,15 @@ const HomeSearchBar = () => {
               placeholder="查找你的目的地国家"
             />
           </div>
+          <button
+            className="text-wrapper_7 flex-col justify-center align-center"
+            onClick={handleSubmit}
+          >
+            <span className="text_9">快速申请出国签证</span>
+          </button>
         </div>
-        <button className="text-wrapper_7 flex-col justify-center align-center" onClick={handleSubmit}>
-          <span className="text_9">快速申请出国签证</span>
-        </button>
-      </div>
-      {isFocused && <DropdownMenu ref={ref} />}
+        {isFocused && <DropdownMenu ref={ref} />}
+      </SearchBar>
     </div>
   );
 };

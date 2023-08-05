@@ -2,8 +2,22 @@ import React, { useState } from "react";
 import CountryList from "./CountryList";
 import "./DropdownMenu.css";
 
+import styled from "styled-components";
+
 //热门国家
 import { HotCountries } from "../../utils/CountryData";
+
+const Containter = styled.div`
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  width: 660px;
+  display: block;
+  position: absolute;
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+`;
 
 const DropdownMenu = React.forwardRef((props, ref) => {
   const [countries, setCountries] = useState(HotCountries);
@@ -13,7 +27,7 @@ const DropdownMenu = React.forwardRef((props, ref) => {
   };
 
   return (
-    <div className="section_15 flex-col" ref={ref} onClick={handleClickInside}>
+    <Containter ref={ref} onClick={handleClickInside}>
       <div className="box_19 flex-row justify-between">
         <div className="group_18 flex-col justify-end">
           <span className="text_45">热门</span>
@@ -35,19 +49,13 @@ const DropdownMenu = React.forwardRef((props, ref) => {
           <span className="text_50">UWXYZ</span>
         </div>
       </div>
-      <img
-        className="image_57"
-        src={
-          "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb61f192893c4ca3a60819005855fb1ce312900abc9e86b7f8374585497a16f12"
-        }
-        alt=""
-      />
+      <div className="dropdownmenu-hr_1" />
       <div className="text-wrapper_101">
         <div className="grid_0">
           <CountryList countries={countries} />
         </div>
       </div>
-    </div>
+    </Containter>
   );
 });
 

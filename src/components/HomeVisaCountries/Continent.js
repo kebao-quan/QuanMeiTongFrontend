@@ -22,7 +22,7 @@ function Continent({ name, handleHover, selected }) {
     }
 
     @media (max-width: 460px) {
-      width: 45vw;
+      width: calc(47.5vw - 5px);
     }
   `;
 

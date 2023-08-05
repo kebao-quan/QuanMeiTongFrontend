@@ -1,6 +1,96 @@
 import React, { useState } from "react";
 import "./Consult.css";
 
+import zixun from "./images/zixun.png";
+import zxzx2 from "./images/zxzx2.png";
+import weixin from "./images/weixin.png";
+import wx from "./images/wx.png";
+import dianhua from "./images/dianhua.png";
+import dh2 from "./images/dh2.png";
+import huidingbu from "./images/huidingbu.png";
+import hddb2 from "./images/hddb2.png";
+import logo2 from "./images/logo2.png";
+import jts from "./images/jts.png";
+import jtx from "./images/jtx.png";
+
+import styled from "styled-components";
+
+const ConsultChat = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  width: 410px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  background: #d23028;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.3s ease, height 0.3s ease;
+
+  &.expanded {
+    height: 540px;
+    width: 668px;
+  }
+
+  & .top-bar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .consult-chat-group_1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  & .consult-chat-text_1 {
+    width: 248px;
+    height: 33px;
+    font-size: 24px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 33px;
+    margin: 0 0 0 10px;
+  }
+
+  & .chat-area {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+`;
+
+const OnlineConsultChat = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <ConsultChat className={isExpanded ? "expanded" : ""}>
+      <div className="top-bar">
+        <div className="consult-chat-group_1">
+          <div className="flex-row align-center">
+            <img className="" src={logo2} alt="logo" />
+            <span className="consult-chat-text_1">全球签证顾问 在线咨询</span>
+          </div>
+          <button onClick={handleExpand}>
+            <img className="" src={isExpanded ? jtx : jts} alt="" />
+          </button>
+        </div>
+      </div>
+      <div className="chat-area"></div>
+    </ConsultChat>
+  );
+};
+
 export const OnlineConsult = () => {
   const [active, setActive] = useState(false);
 
@@ -13,24 +103,19 @@ export const OnlineConsult = () => {
   };
 
   return (
-    <div
-      className="consult-box_101"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="image-text_3 flex-col justify-between">
-        <img
-          className="label_3"
-          src={
-            active
-              ? "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng526abdf8276b8cb6152289ec439437106318a4fa9bde7176d38ba85e0f728423"
-              : "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb120051d7e653933e6370dcdd3275a242dbd78449c55a0ad9d82a940ba7d831d"
-          }
-          alt=""
-        />
-        <span className="text-group_3">在线咨询</span>
+    <>
+      <div
+        className="consult-box_101"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="image-text_3 flex-col justify-between">
+          <img className="label_3" src={active ? zxzx2 : zixun} alt="" />
+          <span className="text-group_3">在线咨询</span>
+        </div>
       </div>
-    </div>
+      <OnlineConsultChat />
+    </>
   );
 };
 
@@ -53,15 +138,7 @@ export const WechatConsult = () => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="image-text_3 flex-col justify-between">
-          <img
-            className="label_3"
-            src={
-              active
-                ? "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnga5b028b84425e5c60fdff49bdf2896f5f01782e47c923560f12086a1b714d416"
-                : "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng2010d494f43213514699211aa442401025b51621042cfb04a8bf5dc6cf0835b5"
-            }
-            alt=""
-          />
+          <img className="label_3" src={active ? wx : weixin} alt="" />
           <span className="text-group_3">微信咨询</span>
         </div>
       </div>
@@ -110,24 +187,14 @@ export const PhoneConsult = () => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="image-text_3 flex-col justify-between">
-          <img
-            className="label_3"
-            src={
-              active
-                ? "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9de1a519553510259e051635eb6678ef4a8b1d0ee0d05c8b00a8dfb1755a99ce"
-                : "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngfe8e3d800dd799ffef901fcc3e6edf0113a50845ddafa8c284064ed21530fa4d"
-            }
-            alt=""
-          />
+          <img className="label_3" src={active ? dh2 : dianhua} alt="" />
           <span className="text-group_3">电话咨询</span>
         </div>
       </div>
       {active && (
-        <div className="phone-group_1 flex-row">
-          <div className="phone-text-group_1 flex-col justify-between">
-            <span className="phone-text_1">全国免费咨询电话</span>
-            <span className="phone-text_2">400-168-2688</span>
-          </div>
+        <div className="phone-group_1 flex-col justify-center align-center">
+          <span className="phone-text_1">全国免费咨询电话</span>
+          <span className="phone-text_2">400-168-2688</span>
         </div>
       )}
     </>
@@ -154,11 +221,7 @@ export const GeneralConsult = () => {
       >
         <img
           className="general-consult-image_1"
-          src={
-            active
-              ? "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngcb3a773316bb880cbec5437b295ef730e9d69bf470760d8c6f0155b037761dd2"
-              : "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng262236dc0f440b20cb349a81e7105f579502cd0dcc57c9e21a1502650561946d"
-          }
+          src={active ? hddb2 : huidingbu}
           alt=""
         />
       </div>

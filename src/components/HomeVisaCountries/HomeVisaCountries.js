@@ -120,6 +120,17 @@ const CountryGrid = styled.div`
   align-content: flex-start;
   gap: 20px;
   margin: 0 0 80px 0;
+
+  @media (max-width: 1100px) {
+    width: 90%;
+    margin: 30px auto 40px auto;
+  }
+
+  @media (max-width: 460px) {
+    width: 95%;
+    margin: 15px auto 20px auto;
+    justify-content: space-between;
+  }
 `;
 
 const HomeVisaCountries = () => {

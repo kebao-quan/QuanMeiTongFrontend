@@ -4,7 +4,7 @@
 }
 
 .navbar-group_2 {
-  max-width: 1600px;
+  max-width: max(83.33333333%, 1600px);
   height: 90px;
   font-family: "Microsoft YaHei";
   margin: 0 auto;

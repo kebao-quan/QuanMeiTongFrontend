@@ -81,9 +81,11 @@
 .visa-textwrapper_101 {
   border-radius: 50%;
   height: 8.0rem;
-  border: 1rem solid rgba(255, 255, 255, 1);
+  border: .1rem solid rgba(255, 255, 255, 1);
   width: 8.0rem;
   margin: 6.0rem 0 0 9.0rem;
+  display: grid;
+  place-items: center;
 }
 
 .visa-apply-text_102 {
@@ -96,5 +98,4 @@
   font-weight: NaN;
   text-align: right;
   line-height: 2.6rem;
-  margin: 1.4rem 0 0 2.0rem;
 }
